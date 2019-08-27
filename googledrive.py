@@ -34,6 +34,6 @@ folder = drive.CreateFile(folder_metadata)
 folder.Upload()
 
 for i in files:
-    file1 = drive.CreateFile({"parents":  [{"kind": "drive#fileLink","id": folder['id']}]})
+    file1 = drive.CreateFile({"title": i, "parents":  [{"kind": "drive#fileLink","id": folder['id']}]})
     file1.SetContentFile(rootfolder+path+'\\'+i)
     file1.Upload()
